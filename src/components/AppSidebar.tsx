@@ -6,6 +6,7 @@ import { useMode } from "@/contexts/ModeContext";
 import { useAuth } from "@/contexts/AuthContext";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { Logo } from "@/components/Logo";
 import {
   Sidebar,
   SidebarContent,
@@ -92,10 +93,7 @@ const AppSidebar = () => {
     <Sidebar collapsible="icon">
       <SidebarHeader className={`${collapsed ? 'p-2 flex justify-center' : 'p-4'}`}>
         <div className={`flex items-center gap-2 ${collapsed ? 'justify-center w-full' : ''}`}>
-          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
-            <span className="text-primary-foreground text-sm font-bold">C</span>
-          </div>
-          {!collapsed && <span className="font-semibold text-foreground text-lg">CholoShikhi</span>}
+          <Logo iconOnly={collapsed} />
         </div>
       </SidebarHeader>
       <SidebarContent>

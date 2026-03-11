@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { usePublishedCourses } from "@/hooks/use-courses";
 import { Link } from "react-router-dom";
 import { BookOpen, Search, ArrowLeft, ChevronLeft, ChevronRight, ArrowUpDown } from "lucide-react";
+import { Logo } from "@/components/Logo";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -83,9 +84,9 @@ const PublicBrowse = () => {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2">
-            <ArrowLeft className="w-4 h-4 text-muted-foreground" />
-            <span className="text-xl font-bold text-primary">CholoShikhi</span>
+          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <ArrowLeft className="w-4 h-4 text-muted-foreground mr-1" />
+            <Logo />
           </Link>
           <div className="flex items-center gap-3">
             <Link to="/auth">

@@ -16,12 +16,12 @@ import {
   Shield,
   ArrowRight,
   Star,
-  GraduationCap,
   Zap,
   Globe,
   Menu,
   X,
 } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -122,13 +122,8 @@ const Landing = () => {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          <Link to="/" className="flex items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-              <GraduationCap className="h-5 w-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold tracking-tight text-foreground">
-              CholoShikhi
-            </span>
+          <Link to="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+            <Logo />
           </Link>
           <div className="hidden items-center gap-8 md:flex">
             <a
@@ -655,12 +650,7 @@ const Landing = () => {
         <div className="mx-auto max-w-6xl px-6 py-12">
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
             <div className="flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                <GraduationCap className="h-4 w-4 text-primary-foreground" />
-              </div>
-              <span className="text-lg font-bold text-foreground">
-                CholoShikhi
-              </span>
+              <Logo />
             </div>
             <div className="flex gap-8">
               <a

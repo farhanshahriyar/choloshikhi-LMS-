@@ -16,6 +16,7 @@ import {
   DollarSign,
 } from "lucide-react";
 import { format } from "date-fns";
+import { Logo } from "@/components/Logo";
 
 const PublicCoursePreview = () => {
   const { courseId } = useParams<{ courseId: string }>();
@@ -26,11 +27,8 @@ const PublicCoursePreview = () => {
       <div className="min-h-screen bg-background">
         <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
           <div className="mx-auto flex h-16 max-w-5xl items-center px-6">
-            <Link to="/" className="flex items-center gap-2.5">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-                <GraduationCap className="h-5 w-5 text-primary-foreground" />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-foreground">CholoShikhi</span>
+            <Link to="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+              <Logo />
             </Link>
           </div>
         </nav>
@@ -65,11 +63,8 @@ const PublicCoursePreview = () => {
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
-          <Link to="/" className="flex items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-              <GraduationCap className="h-5 w-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold tracking-tight text-foreground">CholoShikhi</span>
+          <Link to="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+            <Logo />
           </Link>
           <div className="flex items-center gap-3">
             <Button variant="ghost" size="sm" asChild>
@@ -208,10 +203,7 @@ const PublicCoursePreview = () => {
         <div className="mx-auto max-w-5xl px-6 py-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary">
-                <GraduationCap className="h-3.5 w-3.5 text-primary-foreground" />
-              </div>
-              <span className="text-sm font-bold text-foreground">CholoShikhi</span>
+              <Logo />
             </div>
             <p className="text-xs text-muted-foreground">
               © {new Date().getFullYear()} CholoShikhi. All rights reserved.

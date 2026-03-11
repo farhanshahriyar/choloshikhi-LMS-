@@ -1,0 +1,10 @@
+project_id = "rcikbzgclqkandwabjny"
+
+[functions.mux-video]
+verify_jwt = false
+
+[functions.submit-quiz]
+verify_jwt = false
+
+[functions.send-notification]
+verify_jwt = false

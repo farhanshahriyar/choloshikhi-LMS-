@@ -11,6 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { Logo } from "@/components/Logo";
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -94,10 +95,7 @@ const Auth = () => {
       <div className="relative hidden h-full flex-col bg-muted p-10 text-white lg:flex dark:border-r">
         <div className="absolute inset-0 bg-zinc-900" />
         <div className="relative z-20 flex items-center text-lg font-medium">
-          <div className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-primary/20 mr-2">
-            <Sparkles className="w-5 h-5 text-primary" />
-          </div>
-          CholoShikhi
+          <Logo />
         </div>
         <div className="relative z-20 mt-auto">
           <blockquote className="space-y-2">
@@ -115,12 +113,13 @@ const Auth = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.4 }}
-            className="flex flex-col space-y-2 text-center"
+            className="flex flex-col space-y-2 text-center items-center"
           >
-            <h1 className="text-2xl font-semibold tracking-tight">
-              Welcome to CholoShikhi
+            <h1 className="text-2xl font-semibold tracking-tight mb-2">
+              Welcome to 
             </h1>
-            <p className="text-sm text-muted-foreground">
+            <Logo />
+            <p className="text-sm text-muted-foreground mt-2">
               Enter your credentials to continue
             </p>
           </motion.div>
